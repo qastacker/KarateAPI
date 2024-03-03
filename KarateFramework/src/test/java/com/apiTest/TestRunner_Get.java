@@ -10,9 +10,19 @@ public class TestRunner_Get {
 //		 return Karate.run("getReq","classpath:com/apiFeatures/getRespVariab.feature").relativeTo(getClass());
 //	 }
 	 
+//	 @Test
+//	 public Karate runJSONtest() {
+//		 return Karate.run("classpath:com/apiFeatures/validateJSONArray.feature").relativeTo(getClass());
+//	 }
+	 
+//	 @Test
+//	 public Karate runVariabletest() {
+//		 return Karate.run("classpath:com/apiFeatures/Variable.feature").relativeTo(getClass());
+//	 }
+	 
 	 @Test
-	 public Karate runJSONtest() {
-		 return Karate.run("classpath:com/apiFeatures/validateJSONArray.feature").relativeTo(getClass());
+	 public Karate runVariabletest() {
+		 return Karate.run("classpath:com/apiFeatures/VariableByFile.feature").relativeTo(getClass());
 	 }
 	 
 //	 @Test

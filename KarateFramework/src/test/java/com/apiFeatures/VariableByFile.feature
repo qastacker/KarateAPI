@@ -37,10 +37,15 @@ Feature: Featureed to get 200 request
     And match response.data[2].color == '#string'
     And match response.data[2].year == '#? _ >= 2000' 
     And match response.data[2].name == '#string? _.length >= 5' 
+  
+  Scenario: To get JSON and validate file
+    Given path '/api/users?page=2'
+    When method get
+    And status 200
+    And print 'My respones is:'
+    And print response
+    * def actualResp = read("classpath:com/Util/jResp.json")
+    And print "File ==>",actualResp
+    And match response == actualResp
     
-    
-    
-    
-    
-    
-    
+
